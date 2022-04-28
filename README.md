@@ -4,23 +4,23 @@ This a simple fun filled rock paper scissor game
 
 Deployment
 ----
-1.Clone this repository git clone https://github.com/Deepi03/rockPaperScissor.git
-<br>
-2.Open the program Start the program with the command: ``ng serve``
-<br>
-3.For required package and dependencies ``npm install``
-<br>
-5.For using bootstrap ``npm install bootstrap``
+* Clone this repository `git clone https://github.com/Deepi03/rockPaperScissor.git`
+
+* For required packages and dependencies ``npm install``
+
+* run ``ng serve``
+
+* For using bootstrap ``npm install bootstrap``
 and ``npm install @popperjs/core``
-<br>
-6.Add to angular.json --> `` "styles":[
+
+* Add to angular.json --> `` "styles":[
                   "./node_modules/bootstrap/dist/css/bootstrap.min.css",
                    "src/styles.css"] ``
                       ``    "scripts" :[
                     "./node_modules/@popperjs/core/dist/umd/popper.min.js",
                      "./node_modules/bootstrap/dist/js/bootstrap.min.js"]  ``
                      <br>
-4.The server ``localhost:4200`` is running
+* The server ``localhost:4200`` is running
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
