@@ -1,0 +1,72 @@
+.flex-conatiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+.round{
+    font-family: 'Quintessential', cursive;
+    color: #408AC4;
+}
+
+.score{
+  font-size: 1.6rem;
+}
+
+.pick1{
+    color: gold;
+    font-weight: 600;
+}
+    
+#user-side{
+   display: flex;
+   justify-content: flex-end;  
+   margin-right: 3rem;     
+}
+
+#auto-side{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.rock{
+    max-width: 100%;
+    width: 6rem;
+    margin-right: 2.5rem;
+}
+
+.paper{
+    width: 6rem;
+    max-width: 100%;
+    margin-right: 2.5rem;
+
+}
+.scissors{
+    width: 4.7rem;
+    max-width: 100%;
+} 
+
+.pick{
+   
+    position: absolute;
+    margin-left: 14rem;
+    margin-top: 2rem;  
+}
+
+.icon1{
+font-size: 1.6rem; 
+color: grey;
+}
+
+.icon2{
+    font-size: 1.6rem; 
+    color: gold;
+}
+
+mat-spinner{
+
+}

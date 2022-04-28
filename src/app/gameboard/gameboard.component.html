@@ -1,0 +1,94 @@
+<div class="container">
+  <h1 class="col-12 mb-3 mt-5 round">Round {{ roundCount }}</h1>
+
+  <div class="row mt-4 mb-3">
+    <div class="col-6">
+      <h4 class="round score">Your Score</h4>
+      <fa-icon
+        [icon]="faStar"
+        [ngClass]="userScoreCount >= 1 ? className1 : className"
+      ></fa-icon>
+      <fa-icon
+        [icon]="faStar"
+        [ngClass]="userScoreCount >= 2 ? className1 : className"
+      ></fa-icon>
+      <fa-icon
+        [icon]="faStar"
+        [ngClass]="userScoreCount == 3 ? className1 : className"
+      ></fa-icon>
+    </div>
+    <div class="col-6">
+      <h4 class="round score">Opponent Score</h4>
+      <fa-icon
+        [icon]="faStar"
+        [ngClass]="opponentScoreCount >= 1 ? className1 : className"
+      ></fa-icon>
+      <fa-icon
+        [icon]="faStar"
+        [ngClass]="opponentScoreCount >= 2 ? className1 : className"
+      ></fa-icon>
+      <fa-icon
+        [icon]="faStar"
+        [ngClass]="opponentScoreCount == 3 ? className1 : className"
+      ></fa-icon>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <button (click)="selectOption(0)" class="btn">
+        <img
+          src="assets/images/flirty-japanese-cartoon-rock-digital-illustration-116946145.jpg"
+          alt=""
+          class="rock"
+        />
+      </button>
+      <button (click)="selectOption(1)" class="btn">
+        <img src="assets/images/paper.jpg" alt="" class="paper" />
+      </button>
+      <button (click)="selectOption(2)" class="btn">
+        <img
+          src="assets/images/93413035-만화가-위-벡터-일러스트-레이-션.webp"
+          alt=""
+          class="scissors"
+        />
+      </button>
+      <!-- <i class="fa-solid fa-star-sharp"></i> -->
+    </div>
+    <!-- Auto -->
+
+    <div class="col-6">
+      <div *ngIf="!loading; else loadingAni">
+        <img
+          *ngIf="opponentSelected == this.options.indexOf('rock')"
+          src="assets/images/flirty-japanese-cartoon-rock-digital-illustration-116946145.jpg"
+          alt=""
+          class="rock"
+        />
+
+        <img
+          *ngIf="opponentSelected == this.options.indexOf('paper')"
+          src="assets/images/paper.jpg"
+          alt=""
+          class="paper"
+        />
+
+        <img
+          *ngIf="opponentSelected == this.options.indexOf('scissors')"
+          src="assets/images/93413035-만화가-위-벡터-일러스트-레이-션.webp"
+          alt=""
+          class="scissors"
+        />
+      </div>
+      <ng-template #loadingAni>
+        <mat-spinner></mat-spinner>
+      </ng-template>
+    </div>
+  </div>
+
+  <h4 class="col-12 mt-3 round score">Take your pick</h4>
+  <div *ngIf="!loading && isResultShow">
+    <p *ngIf="theResult == 1" class="round score pick1">You win</p>
+    <p *ngIf="theResult == 2" class="round score pick1">Opponent wins</p>
+    <p *ngIf="theResult == 0" class="round score pick1">Tie</p>
+  </div>
+</div>
